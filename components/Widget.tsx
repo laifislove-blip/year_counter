@@ -7,23 +7,27 @@ interface WidgetProps {
 
 const Widget: React.FC<WidgetProps> = ({ percentage, daysLeft }) => {
   return (
-    <div className="flex items-center justify-center">
-      {/* Notion 임베드 시 음영 문제를 방지하기 위해 모든 외부 shadow 및 glow 제거 */}
-      <div className="w-64 h-64 bg-[#facc15] rounded-[2.5rem] p-10 flex flex-col justify-center">
+    <div className="flex items-center justify-center p-4">
+      {/* Notion 환경에 최적화된 고정 사이즈 카드 */}
+      <div className="w-64 h-64 bg-[#facc15] rounded-[3rem] p-8 flex flex-col items-center justify-between text-center select-none">
         
-        {/* 첫 번째 줄: 진행률 % */}
-        <div className="mb-1">
-          <span className="text-black font-bold text-2xl tracking-tight opacity-80">
+        {/* 상단: 진행률 */}
+        <div className="mt-2">
+          <span className="text-black font-bold text-xl tracking-tight opacity-70">
             {percentage}% passed
           </span>
         </div>
 
-        {/* 두 번째 줄: 남은 일수 강조 */}
-        <div className="flex flex-col">
-          <span className="text-[6.8rem] font-bold text-black leading-[0.9] -ml-1 tracking-tighter">
+        {/* 중앙: 남은 일수 (가장 강조) */}
+        <div className="flex items-center justify-center h-full">
+          <span className="text-[5.8rem] font-bold text-black leading-none tracking-tighter">
             {daysLeft}
           </span>
-          <span className="text-black/50 font-bold text-xl tracking-tight uppercase">
+        </div>
+
+        {/* 하단: 레이블 */}
+        <div className="mb-2">
+          <span className="text-black font-extrabold text-lg tracking-[0.1em] uppercase opacity-80">
             days left
           </span>
         </div>
