@@ -14,6 +14,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-white overflow-hidden">
+      {/* 위젯을 정중앙에 배치 */}
       <Widget 
         percentage={data.percentage} 
         daysLeft={data.daysLeft} 
