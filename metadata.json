@@ -1,0 +1,5 @@
+{
+  "name": "Year Progress Widget",
+  "description": "A minimalist, aesthetic widget that shows the percentage of the year completed and the number of days remaining, inspired by modern mobile OS widgets.",
+  "requestFramePermissions": []
+}
